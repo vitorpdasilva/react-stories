@@ -39,7 +39,7 @@ const obj = [
 ]
 
 const App = () => {
-  return <div style={{ maxWidth: '800px', margin: '50px auto' }}><Stories gradientColors={['blue', 'green']} stories={obj} /></div>
+  return <div style={{ maxWidth: '800px', margin: '50px auto' }}><Stories stories={obj} /></div>
 }
 
 export default App

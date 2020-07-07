@@ -19,6 +19,7 @@ const StyledActiveStory = styled.div`
     top: calc(50% - 42vh);
     width: 450px;
     height: 85vh;
+    overflow: hidden;
   }
   .progress-bar {
     position: absolute;
