@@ -12,10 +12,20 @@ const obj = [
     username: 'fulano 2',
     id: 2,
   },
+  {
+    thumbnail: 'https://picsum.photos/200',
+    username: 'longusernametotestelipssis',
+    id: 3,
+  },
+  {
+    thumbnail: '',
+    username: 'longusernametotestelipssis',
+    id: 4,
+  },
 ]
 
 const App = () => {
-  return <Stories stories={obj} />
+  return <div style={{ maxWidth: '800px', margin: '50px auto' }}><Stories stories={obj} /></div>
 }
 
 export default App

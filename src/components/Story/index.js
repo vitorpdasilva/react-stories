@@ -3,9 +3,10 @@ import StyledAvatar from './styles';
 
 const Story = ({ thumbnail, username, seen }) => (
   <StyledAvatar seen={seen}>
-    {console.log({ thumbnail, username })}
-    <img src={thumbnail} />
-    <span>{username}</span>
+    <div className='avatar-wrapper'>
+      <img src={thumbnail} />
+      <p>{username}</p>
+    </div>
   </StyledAvatar>
 );
 
