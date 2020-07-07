@@ -15,12 +15,44 @@ npm install --save react-stories
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-stories'
-import 'react-stories/dist/index.css'
+import { Stories } from 'react-stories'
+
 
 class Example extends Component {
+  const obj = [
+  {
+    thumbnail: 'https://picsum.photos/200',
+    highlight: [
+      {
+        id: 1,
+        asset: 'https://picsum.photos/450/900',
+      },
+      {
+        id: 2,
+        asset: 'https://picsum.photos/450/900',
+      },
+    ],
+    username: 'fulano',
+    id: 1,
+  },
+  {
+    thumbnail: 'https://picsum.photos/200',
+    username: 'fulano 2',
+    id: 2,
+  },
+  {
+    thumbnail: 'https://picsum.photos/200',
+    username: 'longusernametotestelipssis',
+    id: 3,
+  },
+  {
+    thumbnail: '',
+    username: 'longusernametotestelipssis',
+    id: 4,
+  },
+]
   render() {
-    return <MyComponent />
+    return <Stories gradientColors={['blue', 'green']} stories={obj} />
   }
 }
 ```

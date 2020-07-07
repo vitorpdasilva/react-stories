@@ -22,7 +22,6 @@ const StyledAvatar = styled.div`
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    // border: ${({ seen }) => `2px solid ${seen ? 'grey' : 'green'}`};
     border: 2px solid white;
     position: relative;
     box-sizing: border-box;

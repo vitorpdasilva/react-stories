@@ -4,6 +4,16 @@ import { Stories } from 'react-stories'
 const obj = [
   {
     thumbnail: 'https://picsum.photos/200',
+    highlight: [
+      {
+        id: 1,
+        asset: 'https://picsum.photos/450/900',
+      },
+      {
+        id: 2,
+        asset: 'https://picsum.photos/450/900',
+      },
+    ],
     username: 'fulano',
     id: 1,
   },
@@ -25,7 +35,7 @@ const obj = [
 ]
 
 const App = () => {
-  return <div style={{ maxWidth: '800px', margin: '50px auto' }}><Stories stories={obj} /></div>
+  return <div style={{ maxWidth: '800px', margin: '50px auto' }}><Stories gradientColors={['blue', 'green']} stories={obj} /></div>
 }
 
 export default App
