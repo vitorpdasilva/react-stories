@@ -4,14 +4,27 @@ const StyledAvatar = styled.div`
   display: flex;
   justify-content: center;
   margin-right: 15px;
+  position: relative;
+  align-items: center;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: ${({ gradientColors = [] }) =>
+      `linear-gradient(to right, ${gradientColors[0] || 'red'}, ${
+        gradientColors[1] || 'purple'
+      } )`};
+  }
   .avatar-wrapper {
     text-align: center;
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    border: ${({ seen }) => `2px solid ${seen ? 'grey' : 'green'}`};
+    // border: ${({ seen }) => `2px solid ${seen ? 'grey' : 'green'}`};
+    border: 2px solid white;
     position: relative;
-    padding: 2px;
     box-sizing: border-box;
     cursor: pointer;
     img {
