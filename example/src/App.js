@@ -7,11 +7,15 @@ const obj = [
     highlight: [
       {
         id: 1,
-        asset: 'https://picsum.photos/450/900',
+        asset: 'https://picsum.photos/id/1/450/900',
       },
       {
         id: 2,
-        asset: 'https://picsum.photos/450/900',
+        asset: 'https://picsum.photos/id/2/450/900',
+      },
+      {
+        id: 3,
+        asset: 'https://picsum.photos/id/3/450/900',
       },
     ],
     username: 'fulano',

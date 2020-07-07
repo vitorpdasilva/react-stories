@@ -6,18 +6,19 @@ const ActiveStory = ({ activeStory = [], onClose }) => {
   const [seenHighlight, setSeenHighlight] = useState([]);
 
   setInterval(() => {
-    if (highlightFocus < activeStory.highlight.length) {
+    if (highlightFocus + 1 < activeStory.highlight.length) {
       setSeenHighlight([
         ...seenHighlight,
         activeStory.highlight[highlightFocus].id,
       ]);
       setHighlightFocus(highlightFocus + 1);
+    } else {
+      clearInterval();
     }
   }, 15000);
   return (
     <StyledActiveStory>
       <div className='container'>
-        {console.log({ seenHighlight })}
         <div className='progress-bar'>
           {activeStory.highlight.map((item, index) => (
             <div
@@ -29,6 +30,7 @@ const ActiveStory = ({ activeStory = [], onClose }) => {
             />
           ))}
         </div>
+        <img src={activeStory.highlight[highlightFocus].asset} />
       </div>
       <button onClick={onClose} type='button' className='close'>
         Close
