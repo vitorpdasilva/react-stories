@@ -1,10 +1,21 @@
 import React from 'react'
+import { Stories } from 'react-stories'
 
-import { ExampleComponent } from 'react-stories'
-import 'react-stories/dist/index.css'
+const obj = [
+  {
+    thumbnail: 'https://picsum.photos/200',
+    username: 'fulano',
+    id: 1,
+  },
+  {
+    thumbnail: 'https://picsum.photos/200',
+    username: 'fulano 2',
+    id: 2,
+  },
+]
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Stories stories={obj} />
 }
 
 export default App

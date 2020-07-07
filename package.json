@@ -49,5 +49,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "styled-components": "^5.1.1"
+  }
 }
